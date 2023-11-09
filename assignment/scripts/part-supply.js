@@ -32,6 +32,8 @@ console.log('removedItem', removedItem);
 
 // 5. A delivery of 25 more parts arrived. Add the value 25 to the end of the array
 console.log('5. Add the value 25 into supplyChanges.');
+supplyChanges.push(25);
+console.log('Array supplyChanges with 25 added', supplyChanges);
 
 
 // 6. Create three new variables named 'positives', 'negatives', and
@@ -43,7 +45,24 @@ console.log('5. Add the value 25 into supplyChanges.');
 //      - If the value is a zero, push it into the 'zeroes' array.
 console.log('6. Looping through supplyChanges to populate arrays with positive, negative, and zero values:');
 
+const positives = [];
+const negatives = [];
+const zeroes = [];
 
+let x = 0;
+while(x < supplyChanges.length) {
+  if (supplyChanges[x] > 0 ) {
+    positives.push(supplyChanges[x]);
+  } else if (supplyChanges[x] < 0) {
+    negatives.push(supplyChanges[x]);
+  } else {
+    zeroes.push(supplyChanges[x]);
+  }
+  x++;
+}
+console.log('positives', positives);
+console.log('negatives', negatives);
+console.log('zeroes', zeroes);
 
 
 // ***** STRETCH GOALS *********************************************
